@@ -13,9 +13,7 @@ import com.rabbitmq.client.AMQP.BasicProperties;
 public class RequireMQ {
 	public static void main(String[] args) {
 		ConnectionFactory connectionFactor = new ConnectionFactory();
-		/**
-		 * 杩炴帴閰嶇疆淇℃伅
-		 */
+	
 		connectionFactor.setHost("192.168.0.93");
 		connectionFactor.setPort(5672);
 		connectionFactor.setUsername("root");
@@ -28,11 +26,11 @@ public class RequireMQ {
 		try {
 			con = connectionFactor.newConnection();
 			channel = con.createChannel();
-			channel.queueDeclare("testqueue2", true, false, false, null);
+			channel.queueDeclare("myDirectQueue", true, false, false, null);
 			
-			//鎺ユ敹娑堟伅
-			channel.basicConsume("testqueue2", true, new DefaultConsumer(channel) {
-				//娑堟伅鐨勬帴鏀�
+		
+			channel.basicConsume("myDirectQueue", true, new DefaultConsumer(channel) {
+				
 				@Override
 				public void handleDelivery(String consumerTag, Envelope envelope, BasicProperties properties,
 						byte[] body) throws IOException {

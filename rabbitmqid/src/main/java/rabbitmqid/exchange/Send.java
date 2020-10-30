@@ -11,26 +11,23 @@ import com.rabbitmq.client.ConnectionFactory;
 public class Send {
 
 	public static void main(String[] args) {
-		//鍒涘缓杩炴帴宸ュ巶
 		ConnectionFactory connectionFactor = new ConnectionFactory();
 		/**
-		 * 杩炴帴閰嶇疆淇℃伅
+		 * 
 		 */
 		connectionFactor.setHost("192.168.0.93");
 		connectionFactor.setPort(5672);
 		connectionFactor.setUsername("root");
 		connectionFactor.setPassword("123456");
 		
-		Connection conn = null;//瀹氫箟杩炴帴
-		Channel channel = null;//瀹氫箟淇￠亾
+		Connection conn = null;
+		Channel channel = null;
 		try {
 			conn = (Connection) connectionFactor.newConnection();
 			channel = conn.createChannel();
 			
-			//澹版槑涓�涓槦鍒�
 			//channel.queueDeclare("testqueue2", true, false, false, null);
-			String message = "df鎴戠殑绗竴涓秷鎭�2f22";
-			//鍙戦�佹秷鎭埌mq
+			String message = "d发送的消息";
 			channel.basicPublish("", "testqueue2", null, message.getBytes("utf-8"));
 			
 		} catch (IOException e) {
