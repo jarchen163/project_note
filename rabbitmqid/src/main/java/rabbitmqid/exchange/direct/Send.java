@@ -42,7 +42,7 @@ public class Send {
              *   1、在进行队列和交换机绑定时必须要确保交换机和队列已经成功的声明
              */
             channel.queueBind("myDirectQueue","directExchange","directRoutingKey");
-            String message="direct的测试消息！";
+            String message="1direct的测试消息！";
             /**
              * 发送消息到指定的队列
              * 参数 1 为交换机名称

@@ -1,4 +1,4 @@
-package rabbitmqid.exchange.fanout;
+package rabbitmqid.exchange.topic;
 
 
 import com.rabbitmq.client.Channel;
@@ -27,11 +27,10 @@ public class Send {
              * 以及绑定交换机，建议在消费者中创建队列并绑定交换机
              * 但是发送消息时至少应该确保交换机时存在
              */
-            channel.exchangeDeclare("fanoutExchange","fanout",true);
-//            channel.queueDeclare("fanoutQueue",true,false,false,null);
-//            channel.queueBind("fanoutQueue","fanoutExchange","");
+            channel.exchangeDeclare("topicExchange","topic",true);
+//
 
-            String message="fanout的测试消息！";
+            String message="topic的测试消息！";
             /**
              * 发送消息到指定的队列
              * 参数 1 为交换机名称
@@ -40,7 +39,7 @@ public class Send {
              * 注意：
              *   1、发送消息时必须确保交换机已经创建并且确保已经正确的绑定到了某个队列
              */
-            channel.basicPublish("fanoutExchange","",null,message.getBytes("utf-8"));
+            channel.basicPublish("topicExchange","aa.bb.cc",null,message.getBytes("utf-8"));
             System.out.println("消息发送成功");
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,3 +66,4 @@ public class Send {
 
     }
 }
+
