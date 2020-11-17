@@ -1,0 +1,4 @@
+com\atguigu\hystrix\controller\HystrixControllerTest.class
+com\atguigu\hystrix\feignservice\IFeignServiceTest.class
+com\atguigu\hystrix\feignservice\imple\FeignServiceTestImpl.class
+com\atguigu\hystrix\ConsumerHystrixMain80.class

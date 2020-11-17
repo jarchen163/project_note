@@ -1,0 +1,4 @@
+com\atguigu\springcloudfign\OrderFignMain80.class
+com\atguigu\springcloudfign\service\PaymentFignService.class
+com\atguigu\springcloudfign\cotroller\OrderController.class
+com\atguigu\springcloudfign\config\LogConfig.class

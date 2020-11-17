@@ -12,3 +12,9 @@ eureka:
     service-url:
       ##和eureka交互的地址
       defaultZone: http://eureka7002.com:7002/eureka/
+      #恢复单机版  不集群了
+      #  defaultZone: http://eureka7001.com:7001/eureka/
+  server:
+    #禁用保护模式  配置提出的时间
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000

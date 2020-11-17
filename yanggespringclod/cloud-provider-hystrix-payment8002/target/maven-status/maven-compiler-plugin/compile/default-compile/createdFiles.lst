@@ -1,0 +1,3 @@
+com\atguigu\hystrix\controller\MyController.class
+com\atguigu\hystrix\server\Myservice.class
+com\atguigu\hystrix\PaymentHystrixMain8002.class
