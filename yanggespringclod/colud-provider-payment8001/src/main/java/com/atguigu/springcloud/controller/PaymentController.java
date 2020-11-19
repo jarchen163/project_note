@@ -89,4 +89,8 @@ public class PaymentController {
         return this.discoveryClient;
 
     }
+    @GetMapping("/zipkin")
+    public String getsleuth(){
+        return "zipkin和sleuth是整合的........";
+    }
 }

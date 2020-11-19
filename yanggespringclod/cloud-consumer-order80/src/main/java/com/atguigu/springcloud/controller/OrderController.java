@@ -45,5 +45,11 @@ public class OrderController {
             return  new CommonResult<>(444,"操作失败");
         }
 
+
+    }
+
+    @GetMapping("consumer/zipkin")
+    public String getsleuth(){
+        return restTemplate.getForObject(PAYMENT_URL + "/zipkin",String.class);
     }
 }

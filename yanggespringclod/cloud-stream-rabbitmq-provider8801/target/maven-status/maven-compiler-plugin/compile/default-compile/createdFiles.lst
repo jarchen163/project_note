@@ -1,0 +1,3 @@
+com\atguigu\controller\StreamMQTestController.class
+com\atguigu\service\IMessageProvider.class
+com\atguigu\service\impl\MessageProviderImpl.class

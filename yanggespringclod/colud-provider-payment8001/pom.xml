@@ -13,6 +13,11 @@
 <!-- <dependencyManagement>父工程中使用了  所以子工程中可以不用version  <groupId>-->
 
     <dependencies>
+        <!--  zipkin相关依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <dependency><!--自己整的api-->
             <groupId>com.atguigu.yangge.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
