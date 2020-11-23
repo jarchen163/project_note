@@ -1,17 +1,13 @@
-package com.atguigu.springcloud;
+package com.atguigu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableEurekaClient
 @EnableDiscoveryClient
-@ComponentScan
-public class PaymentMain8001 {
+public class AlibabaNacosMain9001 {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain8001.class,args);
+        SpringApplication.run(AlibabaNacosMain9001.class,args);
     }
 }
